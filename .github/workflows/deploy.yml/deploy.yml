@@ -12,10 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Show Files
+      - name: Show Repository Files
         run: |
           pwd
-          ls -R
+          ls -la
+          find .
 
       - name: Build Image
         run: docker build -t cloudforge-web .
